@@ -8,10 +8,10 @@ def shopping():
     food = ['Cheese', 'Tuna', 'Beef']
     return render_template('shopping.html', food=food)
 
-# @app.route('/')
-# @app.route('/<user>')
-# def index(user=None):
-#     return render_template('user.html', user=user)
+@app.route('/')
+@app.route('/<user>')
+def index(user=None):
+    return render_template('user.html', user=user)
 
 # @app.route('/')
 # def index():
