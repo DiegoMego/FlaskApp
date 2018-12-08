@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <ul>
+    {% for item in food %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

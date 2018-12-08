@@ -3,14 +3,24 @@ from flask import Flask, request, render_template
 #Set the root path
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return 'This is the Homepage'
+@app.route('/shopping')
+def shopping():
+    food = ['Cheese', 'Tuna', 'Beef']
+    return render_template('shopping.html', food=food)
 
-@app.route('/profile/<name>')
-def profile(name):
-    #Look for a file 'profile.html' in the directory templates (this is the default directory for flask).
-    return render_template('profile.html', name=name)
+# @app.route('/')
+# @app.route('/<user>')
+# def index(user=None):
+#     return render_template('user.html', user=user)
+
+# @app.route('/')
+# def index():
+#     return 'This is the Homepage'
+#
+# @app.route('/profile/<name>')
+# def profile(name):
+#     #Look for a file 'profile.html' in the directory templates (this is the default directory for flask).
+#     return render_template('profile.html', name=name)
 # @app.route('/bacon', methods=['GET', 'POST'])
 # def bacon():
 #     if request.method == 'POST':
